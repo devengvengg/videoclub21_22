@@ -36,3 +36,7 @@ Route::get('/login', function () {
 Route::get('/logout', function () {
     return ('Logout usuario');
 });
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
