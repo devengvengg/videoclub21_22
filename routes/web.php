@@ -19,7 +19,7 @@ Route::get('/', [HomeController::class, 'getHome']);
 
 Route::group(['prefix' => 'catalog', 'middleware' => 'auth'], function () {
 
-    Route::get('/', [CatalogController::class, 'getIndex']);
+    Route::get('/', [CatalogController::class, 'getIndex'])->name('dashboard');
 
     Route::get('/show/{id}', [CatalogController::class, 'getShow']);
 
